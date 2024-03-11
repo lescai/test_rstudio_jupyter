@@ -1,4 +1,4 @@
-FROM ghcr.io/lescai-teaching/bigdata-rstudio:latest
+FROM ghcr.io/lescai-teaching/rstudio-docker:latest
 
 ENV NB_USER=rstudio
 ENV VIRTUAL_ENV=/opt/venv
