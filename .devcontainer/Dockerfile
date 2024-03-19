@@ -6,6 +6,10 @@ ENV PATH=${VIRTUAL_ENV}/bin:${PATH}
 
 RUN /rocker_scripts/install_jupyter.sh
 
+RUN sudo apt autoremove
+
+RUN sudo apt clean
+
 EXPOSE 8888
 
 CMD ["/bin/sh", "-c", "jupyter lab --ip 0.0.0.0 --no-browser"]
