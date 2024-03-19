@@ -4,11 +4,11 @@ ENV NB_USER=rstudio
 ENV VIRTUAL_ENV=/opt/venv
 ENV PATH=${VIRTUAL_ENV}/bin:${PATH}
 
-RUN /rocker_scripts/install_jupyter.sh
-
 RUN sudo apt autoremove
 
 RUN sudo apt clean
+
+RUN /rocker_scripts/install_jupyter.sh
 
 EXPOSE 8888
 
